@@ -1,0 +1,48 @@
+<div class="sand-foreground"></div>
+
+<style>
+.sand-foreground {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35vh;
+  pointer-events: none;
+  z-index: 10;
+
+  /* sand base + fade */
+  background:
+    linear-gradient(
+      to top,
+      rgba(225, 205, 175, 0.95) 0%,
+      rgba(225, 205, 175, 0.75) 25%,
+      rgba(225, 205, 175, 0.45) 50%,
+      rgba(225, 205, 175, 0.18) 70%,
+      rgba(225, 205, 175, 0.0) 100%
+    ),
+
+    /* fine sand grain (light brown) */
+    radial-gradient(
+      circle,
+      rgba(190, 165, 135, 0.25) 1px,
+      transparent 1.5px
+    ),
+
+    /* salt specks (off-white) */
+    radial-gradient(
+      circle,
+      rgba(255, 248, 235, 0.35) 0.8px,
+      transparent 1.4px
+    );
+
+  background-size:
+    100% 100%,   /* fade */
+    6px 6px,     /* sand grain */
+    9px 9px;     /* salt specks */
+
+  background-position:
+    0 0,
+    0 0,
+    3px 4px;
+}
+</style>
